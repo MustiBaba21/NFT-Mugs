@@ -1,38 +1,200 @@
-.App {
-  text-align: center;
+body {
+  background-color: #14161A;
+  color: #fff;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.centered-content {
+  padding-top: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input-container input::placeholder {
+  color: black; /* Changes the color of the placeholder text to black */
+  opacity: 1; /* Ensures the color is not transparent */
+  font-size: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center; /* Aligns children vertically in the middle */
 }
 
-.App-link {
-  color: #61dafb;
+.input-container input, .input-container .btn_in {
+  background-color: #07a1f9;
+  height: 35px; /* Ensures the button and input have the same height */
+  padding: 0 10px; /* Adjust padding as needed */
+  margin: 0; /* Remove any default margins */
+  margin-bottom: 20px;
+  text-align: center;
+  color: #14161A;
+  text-emphasis-color: #14161A ;
+  font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.btn_in {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border: 1px solid #43443f;
+  background-color: #07a1f9; /* Set the background color for the button */
+  color: white; /* Set the text color */
+  /* Add other styles like border-radius, font-size, etc., as needed */
+}
+
+.button-dropdown-container {
+  /* Adjust margins as needed to position the buttons correctly */
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center; /* Center align if needed */
+}
+
+.dropdown {
+  position: relative; /* Ensures dropdown menus are positioned relative to these containers */
+  display: inline-block;
+}
+
+
+.btn{
+  width: 140px;
+  height: 35px;
+  font-size: 20px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bolder;
+  
+  border: 3px solid #43443f;
+  background-color: #07a1f9;
+}
+
+.dropdown-menu {
+  position: absolute;
+  width: 130px;
+  top: 100%; /* Positions the menu right below the button */
+  left: 50%; /* Centers the dropdown menu */
+  transform: translateX(-50%); /* Aligns the center of the dropdown with the button */
+  z-index: 1000;
+  display: block;
+  float: none;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-clip: padding-box;
+  border: 3px solid #43443f;
+  background-color: #07a1f9;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: .25rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.image-container {
+  position: relative;
+
+  width: 100%;
+  height: 512px;
+  overflow: hidden;
+  margin-bottom: 35px;
+}
+
+.btn_suc{
+  width: 140px;
+  height: 35px;
+  font-size: 20px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  border: 3px solid #43443f;
+  background-color: green;
+}
+
+.main-frame {
+  background-color: #212529;
+  border: 2px solid #07a1f9; /* Blue border, adjust color as needed */
+  padding: 15px; /* Adds some space inside the frame */
+  margin-bottom: 20px; /* Adds space between elements */
+  border-radius: 10px; /* Rounded corners */
+  margin: 20px auto; /* Center the frame and add margin */
+  max-width: 960px; /* Adjust maximum width as needed */
+}
+
+.top-banner {
+  background-color: #212529;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.logos-left {
+  display: flex; /* This will align the logos horizontally */
+}
+
+.logos-left img {
+  height: 50px; /* Adjust the size as needed */
+  margin: 0 10px;
+  margin-right: 25px;
+}
+
+.logo-right img {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.title {
+  color: white; /* Adjust the color as needed */
+  display: flex;
+  align-items: center;
+  /* Add additional styling for the title */
+}
+
+
+.wallet-container {
+  position: relative; /* For positioning the dropdown */
+}
+
+.wallet-dropdown {
+  position: absolute;
+  top: 60px; /* Adjust as per your design */
+  left: -280px;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  z-index: 100; /* Ensure it's above other elements */
+  width: 400px; /* Adjust as needed */
+}
+
+.flex-container {
+  display: flex;
+  justify-content: flex-end; /* Keeps the container to the right */
+  align-items: start; /* Aligns items to the top of the container */
+  padding: 10px;
+  /* Add other styling as necessary */
+}
+
+.helio {
+  margin-top: -20px; /* Adjust this value as needed to move up */
+  /* Remove previous absolute positioning and large margins */
+  /* Add any specific styling needed for the Helio container */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .flex-container {
+    justify-content: center; /* Center on smaller screens */
   }
 }
